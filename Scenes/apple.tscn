@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dh8abo6dllwx"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://b1a0rdw0da5ro" path="res://Resources/fruitPhysyics.tres" id="1_ir1en"]
+[ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_8gwai"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_37lne"]
+radius = 25.0
+
+[node name="Apple" type="RigidBody2D" unique_id=1663714031]
+physics_material_override = ExtResource("1_ir1en")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2000342910]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_8gwai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610578310]
+shape = SubResource("CircleShape2D_37lne")

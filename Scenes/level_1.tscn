@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://vibiesk4sxy1"]
+
+[ext_resource type="Script" uid="uid://q8n6g7jd8b1q" path="res://Scripts/main.gd" id="1_8ffim"]
+[ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
+size = Vector2(400, 25)
+
+[node name="Level_1" type="Node2D" unique_id=819945439]
+script = ExtResource("1_8ffim")
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1364147807]
+position = Vector2(450, 400)
+rotation = 0.34906584
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1682168047]
+shape = SubResource("RectangleShape2D_3hls8")
+
+[node name="Icon" type="Sprite2D" parent="Platform" unique_id=1070232900]
+scale = Vector2(3.2, 0.2)
+texture = ExtResource("2_xfk5q")
+
+[node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
+position = Vector2(350, 60)
+scale = Vector2(0.75, 1)
+texture = ExtResource("2_xfk5q")
