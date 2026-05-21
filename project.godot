@@ -15,6 +15,10 @@ run/main_scene="uid://vibiesk4sxy1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Resources/icon.svg"
 
+[global_group]
+
+Fruit=""
+
 [physics]
 
 common/physics_ticks_per_second=30
