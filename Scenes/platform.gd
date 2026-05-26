@@ -11,4 +11,5 @@ func _process(delta: float) -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	print(viewport, event, shape_idx)
-	#if event
+	if event is InputEventMouseMotion and event.button_mask == 1:
+		position += event.relative

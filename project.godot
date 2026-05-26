@@ -18,6 +18,7 @@ config/icon="res://Resources/icon.svg"
 [global_group]
 
 Fruit=""
+Movable=""
 
 [physics]
 
