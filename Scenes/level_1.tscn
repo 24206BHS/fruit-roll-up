@@ -7,6 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(400, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfk5q"]
+size = Vector2(10, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6j4"]
+size = Vector2(80, 10)
+
 [node name="Level_1" type="Node2D" unique_id=819945439]
 script = ExtResource("1_8ffim")
 
@@ -27,5 +33,20 @@ texture = ExtResource("2_xfk5q")
 position = Vector2(350, 60)
 scale = Vector2(0.75, 1)
 texture = ExtResource("2_xfk5q")
+
+[node name="Goal" type="StaticBody2D" parent="." unique_id=1873381732]
+position = Vector2(850, 550)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=603713951]
+position = Vector2(-40, 0)
+shape = SubResource("RectangleShape2D_xfk5q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Goal" unique_id=2112710440]
+position = Vector2(40, 0)
+shape = SubResource("RectangleShape2D_xfk5q")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Goal" unique_id=1855678673]
+position = Vector2(0, 50)
+shape = SubResource("RectangleShape2D_7p6j4")
 
 [connection signal="input_event" from="Platform" to="Platform" method="_on_input_event"]

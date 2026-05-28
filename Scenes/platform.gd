@@ -28,8 +28,9 @@ var offset = Vector2.ZERO #Offset of mouse from platform when moving
 
 func _input(event: InputEvent) -> void:
 	if dragging:
-		position += (mouse-position)-offset
-		mouse = get_global_mouse_position()
+		if event is InputEventMouseMotion and event.button_mask == 1:
+			position += (mouse-position)-offset
+			mouse = get_global_mouse_position()
 	if rotating:
 		if event is InputEventMouseMotion:
 			rotating = false
