@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(400, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6444e"]
+size = Vector2(80, 10)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfk5q"]
 size = Vector2(10, 100)
 
@@ -37,12 +40,37 @@ texture = ExtResource("2_xfk5q")
 [node name="Goal" type="StaticBody2D" parent="." unique_id=1873381732]
 position = Vector2(850, 550)
 
+[node name="Area2D" type="Area2D" parent="Goal" unique_id=1928404407]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal/Area2D" unique_id=47122219]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_6444e")
+
+[node name="Icon" type="Sprite2D" parent="Goal" unique_id=5588921]
+position = Vector2(-45, 0)
+rotation = -0.08726646
+scale = Vector2(0.1, 0.8)
+texture = ExtResource("2_xfk5q")
+
+[node name="Icon2" type="Sprite2D" parent="Goal" unique_id=925430634]
+position = Vector2(45, 0)
+rotation = 0.08726646
+scale = Vector2(0.1, 0.8)
+texture = ExtResource("2_xfk5q")
+
+[node name="Icon3" type="Sprite2D" parent="Goal" unique_id=1192310978]
+position = Vector2(0, 50)
+scale = Vector2(0.7, 0.1)
+texture = ExtResource("2_xfk5q")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=603713951]
-position = Vector2(-40, 0)
+position = Vector2(-45, 0)
+rotation = -0.08726646
 shape = SubResource("RectangleShape2D_xfk5q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Goal" unique_id=2112710440]
-position = Vector2(40, 0)
+position = Vector2(45, 0)
+rotation = 0.08726646
 shape = SubResource("RectangleShape2D_xfk5q")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Goal" unique_id=1855678673]
