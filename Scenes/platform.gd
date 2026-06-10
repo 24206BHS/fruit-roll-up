@@ -2,29 +2,10 @@ extends StaticBody2D
 
 var dragging = false
 var rotating = false
-var moving = false
 var mouse = Vector2.ZERO #Previous mouse position for platform moving
 var offset = Vector2.ZERO #Offset of mouse from platform when moving
 
-#func _process(delta: float) -> void:
-	#if dragging:
-		#if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			#position += (mouse-position)-offset
-			#mouse = get_global_mouse_position()
-		#else:
-			#dragging = false
-	#if rotating:
-		#if moving:
-			#rotating = false
-		#else:
-			#print(InputEventMouseButton)
-			#if Input.get_mouse_button_mask():
-				#rotate(-PI/24)
-				#print("right")
-			#elif Input.is_action_just_pressed("ui_text_scroll_up"):
-				#rotate(PI/24)
-				#print("left")
-		#print("in")
+signal movement #Signal to tell fruit to delete when the player moves a platform
 
 func _input(event: InputEvent) -> void:
 	if dragging:
@@ -48,6 +29,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			dragging = true
 			mouse = get_global_mouse_position()
 			offset = mouse-position
+			movement.emit()
 		elif event.button_index == 4 or event.button_index == 5:
 			rotating = true
 		else:
