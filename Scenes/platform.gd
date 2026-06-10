@@ -32,5 +32,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			movement.emit()
 		elif event.button_index == 4 or event.button_index == 5:
 			rotating = true
+			movement.emit()
 		else:
 			dragging = false

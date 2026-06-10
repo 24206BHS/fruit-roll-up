@@ -3,18 +3,19 @@
 [ext_resource type="Script" uid="uid://q8n6g7jd8b1q" path="res://Scripts/main.gd" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scenes/platform.gd" id="2_7p6j4"]
 [ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
+[ext_resource type="Script" uid="uid://bgyk8xhcju1nd" path="res://Scenes/goal.gd" id="4_7p6j4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(400, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6444e"]
-size = Vector2(80, 10)
+size = Vector2(80, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfk5q"]
-size = Vector2(10, 100)
+size = Vector2(10, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6j4"]
-size = Vector2(80, 10)
+size = Vector2(60, 10)
 
 [node name="Level_1" type="Node2D" unique_id=819945439]
 script = ExtResource("1_8ffim")
@@ -39,37 +40,39 @@ texture = ExtResource("2_xfk5q")
 
 [node name="Goal" type="StaticBody2D" parent="." unique_id=1873381732]
 position = Vector2(850, 550)
+script = ExtResource("4_7p6j4")
 
 [node name="Area2D" type="Area2D" parent="Goal" unique_id=1928404407]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal/Area2D" unique_id=47122219]
-position = Vector2(0, 40)
+position = Vector2(0, 13.5)
 shape = SubResource("RectangleShape2D_6444e")
 
 [node name="Icon" type="Sprite2D" parent="Goal" unique_id=5588921]
-position = Vector2(-45, 0)
-rotation = -0.08726646
+position = Vector2(-40, 0)
+rotation = -0.08726645
 scale = Vector2(0.1, 0.8)
 texture = ExtResource("2_xfk5q")
 
 [node name="Icon2" type="Sprite2D" parent="Goal" unique_id=925430634]
-position = Vector2(45, 0)
-rotation = 0.08726646
+position = Vector2(40, 0)
+rotation = 0.08726645
 scale = Vector2(0.1, 0.8)
 texture = ExtResource("2_xfk5q")
 
 [node name="Icon3" type="Sprite2D" parent="Goal" unique_id=1192310978]
 position = Vector2(0, 50)
-scale = Vector2(0.7, 0.1)
+scale = Vector2(0.5, 0.1)
 texture = ExtResource("2_xfk5q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=603713951]
-position = Vector2(-45, 0)
+position = Vector2(-35, 10)
 rotation = -0.08726646
 shape = SubResource("RectangleShape2D_xfk5q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Goal" unique_id=2112710440]
-position = Vector2(45, 0)
+position = Vector2(35, 10)
 rotation = 0.08726646
 shape = SubResource("RectangleShape2D_xfk5q")
 
@@ -78,3 +81,5 @@ position = Vector2(0, 50)
 shape = SubResource("RectangleShape2D_7p6j4")
 
 [connection signal="input_event" from="Platform" to="Platform" method="_on_input_event"]
+[connection signal="movement" from="Platform" to="." method="_on_platform_movement"]
+[connection signal="body_entered" from="Goal/Area2D" to="Goal" method="_on_area_2d_body_entered"]

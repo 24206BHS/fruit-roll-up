@@ -18,3 +18,8 @@ func _process(delta: float) -> void:
 		child.position = dropPos
 		self.add_child(child)
 		isDropped = true
+
+func _on_platform_movement() -> void:
+	if isDropped:
+		for i in get_tree().get_nodes_in_group("Fruit"):
+			i.queue_free()
