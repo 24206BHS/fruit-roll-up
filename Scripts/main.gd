@@ -7,6 +7,7 @@ var isDropped = false
 func _ready() -> void:
 	dropPos = $Dropper.position
 	dropPos.y += 20
+	$Platform.get_signal_list()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):

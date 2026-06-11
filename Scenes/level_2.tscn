@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://vibiesk4sxy1"]
+[gd_scene format=3 uid="uid://dpik7fowdkdvv"]
 
-[ext_resource type="Script" uid="uid://q8n6g7jd8b1q" path="res://Scripts/main.gd" id="1_8ffim"]
-[ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scenes/platform.gd" id="2_7p6j4"]
-[ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
-[ext_resource type="Script" uid="uid://bgyk8xhcju1nd" path="res://Scenes/goal.gd" id="4_7p6j4"]
+[ext_resource type="Script" uid="uid://q8n6g7jd8b1q" path="res://Scripts/main.gd" id="1_1q6tm"]
+[ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scenes/platform.gd" id="2_v36qu"]
+[ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="3_cggpd"]
+[ext_resource type="Script" uid="uid://bgyk8xhcju1nd" path="res://Scenes/goal.gd" id="4_055b2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(400, 25)
@@ -18,29 +18,44 @@ size = Vector2(10, 80)
 size = Vector2(60, 10)
 
 [node name="Level_1" type="Node2D" unique_id=819945439]
-script = ExtResource("1_8ffim")
+script = ExtResource("1_1q6tm")
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=1364147807 groups=["Movable"]]
 position = Vector2(450, 400)
 rotation = 0.34906584
+scale = Vector2(0.5, 1)
 input_pickable = true
-script = ExtResource("2_7p6j4")
+script = ExtResource("2_v36qu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1682168047]
 shape = SubResource("RectangleShape2D_3hls8")
 
 [node name="Icon" type="Sprite2D" parent="Platform" unique_id=1070232900]
 scale = Vector2(3.2, 0.2)
-texture = ExtResource("2_xfk5q")
+texture = ExtResource("3_cggpd")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1141124213 groups=["Movable"]]
+position = Vector2(600, 400)
+rotation = 0.34906584
+scale = Vector2(0.5, 1)
+input_pickable = true
+script = ExtResource("2_v36qu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=344566702]
+shape = SubResource("RectangleShape2D_3hls8")
+
+[node name="Icon" type="Sprite2D" parent="Platform2" unique_id=1411518802]
+scale = Vector2(3.2, 0.2)
+texture = ExtResource("3_cggpd")
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
 position = Vector2(350, 60)
 scale = Vector2(0.75, 1)
-texture = ExtResource("2_xfk5q")
+texture = ExtResource("3_cggpd")
 
 [node name="Goal" type="StaticBody2D" parent="." unique_id=1873381732]
-position = Vector2(850, 550)
-script = ExtResource("4_7p6j4")
+position = Vector2(985, 559)
+script = ExtResource("4_055b2")
 
 [node name="Area2D" type="Area2D" parent="Goal" unique_id=1928404407]
 collision_layer = 0
@@ -53,18 +68,18 @@ shape = SubResource("RectangleShape2D_6444e")
 position = Vector2(-35, 10)
 rotation = -0.08726645
 scale = Vector2(0.1, 0.7)
-texture = ExtResource("2_xfk5q")
+texture = ExtResource("3_cggpd")
 
 [node name="Icon2" type="Sprite2D" parent="Goal" unique_id=925430634]
 position = Vector2(35, 10)
 rotation = 0.08726645
 scale = Vector2(0.1, 0.7)
-texture = ExtResource("2_xfk5q")
+texture = ExtResource("3_cggpd")
 
 [node name="Icon3" type="Sprite2D" parent="Goal" unique_id=1192310978]
 position = Vector2(0, 50)
 scale = Vector2(0.5, 0.1)
-texture = ExtResource("2_xfk5q")
+texture = ExtResource("3_cggpd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=603713951]
 position = Vector2(-35, 10)
@@ -82,4 +97,6 @@ shape = SubResource("RectangleShape2D_7p6j4")
 
 [connection signal="input_event" from="Platform" to="Platform" method="_on_input_event"]
 [connection signal="movement" from="Platform" to="." method="_on_platform_movement"]
+[connection signal="input_event" from="Platform2" to="Platform2" method="_on_input_event"]
+[connection signal="movement" from="Platform2" to="." method="_on_platform_movement"]
 [connection signal="body_entered" from="Goal/Area2D" to="Goal" method="_on_area_2d_body_entered"]
