@@ -54,7 +54,7 @@ scale = Vector2(0.75, 1)
 texture = ExtResource("3_cggpd")
 
 [node name="Goal" type="StaticBody2D" parent="." unique_id=1873381732]
-position = Vector2(985, 559)
+position = Vector2(900, 550)
 script = ExtResource("4_055b2")
 
 [node name="Area2D" type="Area2D" parent="Goal" unique_id=1928404407]

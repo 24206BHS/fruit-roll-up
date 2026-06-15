@@ -12,6 +12,8 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion and event.button_mask == 1:
 			position += (mouse-position)-offset
 			mouse = get_global_mouse_position()
+		else:
+			dragging = false
 	if rotating:
 		if event is InputEventMouseMotion:
 			rotating = false
@@ -20,7 +22,6 @@ func _input(event: InputEvent) -> void:
 				rotate(-PI/24)
 			elif event.button_index == 5:
 				rotate(PI/24)
-			
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	print(viewport, event, shape_idx)
