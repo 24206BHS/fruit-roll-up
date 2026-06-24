@@ -24,7 +24,7 @@ func _input(event: InputEvent) -> void:
 				rotate(PI/24)
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	print(viewport, event, shape_idx)
+	#print(viewport, event, shape_idx)
 	if event is InputEventMouseButton:
 		if event.button_index == 1:
 			dragging = true

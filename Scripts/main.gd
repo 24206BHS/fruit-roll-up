@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		print_tree_pretty()
+		#print_tree_pretty()
 		if isDropped:
 			for i in get_tree().get_nodes_in_group("Fruit"):
 				i.queue_free()
