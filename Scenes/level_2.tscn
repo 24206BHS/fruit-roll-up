@@ -8,6 +8,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(400, 25)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q6tm"]
+bg_color = Color(0, 0, 0, 0.7411765)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_v36qu"]
+font_size = 32
+
 [node name="Level_1" type="Node2D" unique_id=819945439]
 script = ExtResource("1_1q6tm")
 
@@ -44,6 +60,58 @@ texture = ExtResource("3_cggpd")
 
 [node name="Goal" parent="." unique_id=48586906 instance=ExtResource("4_1q6tm")]
 position = Vector2(850, 550)
+
+[node name="Control" type="Control" parent="." unique_id=1350695701]
+visible = false
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=968675190]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1q6tm")
+
+[node name="NextLevel" type="Button" parent="Control/Panel" unique_id=511378277]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -31.0
+offset_right = 45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Next Level"
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=228314697]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You win!"
+label_settings = SubResource("LabelSettings_v36qu")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="input_event" from="Platform" to="Platform" method="_on_input_event"]
 [connection signal="movement" from="Platform" to="." method="_on_platform_movement"]
