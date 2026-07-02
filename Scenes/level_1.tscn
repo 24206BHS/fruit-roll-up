@@ -24,7 +24,7 @@ corner_radius_bottom_left = 50
 [sub_resource type="LabelSettings" id="LabelSettings_7p6j4"]
 font_size = 32
 
-[node name="Level_1" type="Node2D" unique_id=819945439]
+[node name="Main" type="Node2D" unique_id=819945439]
 script = ExtResource("1_7p6j4")
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=1364147807 groups=["Movable"]]
