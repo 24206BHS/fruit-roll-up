@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://b1xg6tmwdvsr7"]
+
+[ext_resource type="Script" uid="uid://dc3lxpnjlvc8n" path="res://Scripts/menu.gd" id="1_jjgbg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u77a"]
+bg_color = Color(0, 0, 0, 0.7411765)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo1nx"]
+font_size = 64
+
+[node name="Main" type="Control" unique_id=1500705049]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjgbg")
+
+[node name="LevelSelect" type="Panel" parent="." unique_id=1932268977]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7u77a")
+
+[node name="Level1" type="Button" parent="LevelSelect" unique_id=262211669]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -31.0
+offset_right = 45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "1st Level"
+
+[node name="Play" type="Button" parent="." unique_id=2110895326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.5
+anchor_right = 0.55
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -15.5
+offset_right = 52.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play (Level 1)"
+
+[node name="LevelSelectButton" type="Button" parent="." unique_id=1925711223]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.6
+anchor_right = 0.55
+anchor_bottom = 0.6
+offset_left = -52.0
+offset_top = -15.5
+offset_right = 52.0
+offset_bottom = 15.5
+grow_vertical = 2
+text = "Level Select"
+
+[node name="Label" type="Label" parent="." unique_id=2119806773]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Fruit roll up"
+label_settings = SubResource("LabelSettings_bo1nx")
+horizontal_alignment = 1
+vertical_alignment = 1

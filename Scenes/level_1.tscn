@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vibiesk4sxy1"]
 
-[ext_resource type="Script" uid="uid://dhwuwetjl5kwo" path="res://Scenes/level_1.gd" id="1_7p6j4"]
-[ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scenes/platform.gd" id="2_7p6j4"]
+[ext_resource type="Script" uid="uid://dhwuwetjl5kwo" path="res://Scripts/level_1.gd" id="1_7p6j4"]
+[ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scripts/platform.gd" id="2_7p6j4"]
 [ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_7p6j4"]
 
@@ -52,8 +52,9 @@ offset_left = 527.0
 offset_top = 159.0
 offset_right = 982.0
 offset_bottom = 234.0
-text = "Drag the platform with left click and rotate with scroll wheel to position in place to get the apple from the dropper to the goal
-Push space to drop"
+text = "Left mouse button - drag platform
+Scroll wheel - rotate platform
+Position the platform in place to get the fruit from the dropper into the basket"
 horizontal_alignment = 1
 autowrap_mode = 3
 
