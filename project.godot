@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Fruit roll up"
-run/main_scene="uid://vibiesk4sxy1"
+run/main_scene="uid://b1xg6tmwdvsr7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Resources/icon.svg"
 

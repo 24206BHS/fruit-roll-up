@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dc3lxpnjlvc8n" path="res://Scripts/menu.gd" id="1_jjgbg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u77a"]
-bg_color = Color(0, 0, 0, 0.7411765)
+bg_color = Color(0.23031491, 0.23031494, 0.23031488, 0.84705883)
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
@@ -29,7 +29,7 @@ grow_vertical = 2
 script = ExtResource("1_jjgbg")
 
 [node name="LevelSelect" type="Panel" parent="." unique_id=1932268977]
-visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -43,16 +43,45 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_7u77a")
 [node name="Level1" type="Button" parent="LevelSelect" unique_id=262211669]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -45.0
-offset_top = -31.0
-offset_right = 45.0
-offset_bottom = -45.0
-grow_horizontal = 2
-grow_vertical = 0
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.2
+anchor_bottom = 0.2
+offset_right = 90.0
+offset_bottom = 31.0
+text = "1st Level"
+
+[node name="Level2" type="Button" parent="LevelSelect" unique_id=332398823]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.35
+anchor_bottom = 0.2
+offset_right = 90.0
+offset_bottom = 31.0
+text = "1st Level"
+
+[node name="Level3" type="Button" parent="LevelSelect" unique_id=1285829311]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.2
+anchor_right = 0.55
+anchor_bottom = 0.2
+offset_right = 90.0
+offset_bottom = 31.0
+text = "1st Level"
+
+[node name="Level4" type="Button" parent="LevelSelect" unique_id=1966184209]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.2
+anchor_right = 0.75
+anchor_bottom = 0.2
+offset_right = 90.0
+offset_bottom = 31.0
 text = "1st Level"
 
 [node name="Play" type="Button" parent="." unique_id=2110895326]
@@ -95,3 +124,6 @@ text = "Fruit roll up"
 label_settings = SubResource("LabelSettings_bo1nx")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="LevelSelectButton" to="." method="_on_level_select_button_pressed"]
