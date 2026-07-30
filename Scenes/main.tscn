@@ -29,6 +29,7 @@ grow_vertical = 2
 script = ExtResource("1_jjgbg")
 
 [node name="LevelSelect" type="Panel" parent="." unique_id=1932268977]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
@@ -125,5 +126,9 @@ label_settings = SubResource("LabelSettings_bo1nx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="LevelSelect/Level1" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="LevelSelect/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="LevelSelect/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="LevelSelect/Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="LevelSelectButton" to="." method="_on_level_select_button_pressed"]

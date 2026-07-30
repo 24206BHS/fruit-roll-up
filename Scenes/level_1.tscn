@@ -1,12 +1,9 @@
 [gd_scene format=3 uid="uid://vibiesk4sxy1"]
 
 [ext_resource type="Script" uid="uid://dhwuwetjl5kwo" path="res://Scripts/level_1.gd" id="1_7p6j4"]
-[ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scripts/platform.gd" id="2_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://cm6dpgumy2mwa" path="res://Scenes/platform.tscn" id="2_7p6j4"]
 [ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_7p6j4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
-size = Vector2(400, 25)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p6j4"]
 bg_color = Color(0, 0, 0, 0.7411765)
@@ -27,17 +24,9 @@ font_size = 32
 [node name="Main" type="Node2D" unique_id=819945439]
 script = ExtResource("1_7p6j4")
 
-[node name="Platform" type="StaticBody2D" parent="." unique_id=1364147807 groups=["Movable"]]
+[node name="Platform" parent="." unique_id=304033099 instance=ExtResource("2_7p6j4")]
 position = Vector2(450, 400)
-input_pickable = true
-script = ExtResource("2_7p6j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1682168047]
-shape = SubResource("RectangleShape2D_3hls8")
-
-[node name="Icon" type="Sprite2D" parent="Platform" unique_id=1070232900]
-scale = Vector2(3.2, 0.2)
-texture = ExtResource("2_xfk5q")
+scale = Vector2(2, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
 position = Vector2(350, 60)
@@ -110,6 +99,5 @@ label_settings = SubResource("LabelSettings_7p6j4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="input_event" from="Platform" to="Platform" method="_on_input_event"]
 [connection signal="movement" from="Platform" to="." method="_on_platform_movement"]
 [connection signal="pressed" from="Control/Panel/NextLevel" to="." method="_on_next_level_pressed"]
