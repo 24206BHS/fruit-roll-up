@@ -44,46 +44,57 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_7u77a")
 [node name="Level1" type="Button" parent="LevelSelect" unique_id=262211669]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
+anchor_left = 0.15
 anchor_top = 0.2
 anchor_right = 0.2
 anchor_bottom = 0.2
 offset_right = 90.0
 offset_bottom = 31.0
-text = "1st Level"
+text = "Level 1"
 
 [node name="Level2" type="Button" parent="LevelSelect" unique_id=332398823]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.35
+anchor_left = 0.425
 anchor_top = 0.2
-anchor_right = 0.35
+anchor_right = 0.475
 anchor_bottom = 0.2
 offset_right = 90.0
 offset_bottom = 31.0
-text = "1st Level"
+text = "Level 2"
 
 [node name="Level3" type="Button" parent="LevelSelect" unique_id=1285829311]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.55
-anchor_top = 0.2
-anchor_right = 0.55
-anchor_bottom = 0.2
-offset_right = 90.0
-offset_bottom = 31.0
-text = "1st Level"
-
-[node name="Level4" type="Button" parent="LevelSelect" unique_id=1966184209]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.75
+anchor_left = 0.7
 anchor_top = 0.2
 anchor_right = 0.75
 anchor_bottom = 0.2
 offset_right = 90.0
 offset_bottom = 31.0
-text = "1st Level"
+text = "Level 3"
+
+[node name="Level4" type="Button" parent="LevelSelect" unique_id=1966184209]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.4
+anchor_right = 0.2
+anchor_bottom = 0.4
+offset_right = 90.0
+offset_bottom = 31.0
+text = "Level 4"
+
+[node name="Level5" type="Button" parent="LevelSelect" unique_id=354896286]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.4
+anchor_right = 0.475
+anchor_bottom = 0.4
+offset_right = 90.0
+offset_bottom = 31.0
+text = "level 5"
 
 [node name="Play" type="Button" parent="." unique_id=2110895326]
 layout_mode = 1
@@ -130,5 +141,6 @@ vertical_alignment = 1
 [connection signal="pressed" from="LevelSelect/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="LevelSelect/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="LevelSelect/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="LevelSelect/Level5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="LevelSelectButton" to="." method="_on_level_select_button_pressed"]

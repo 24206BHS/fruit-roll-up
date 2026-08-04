@@ -92,4 +92,6 @@ label_settings = SubResource("LabelSettings_v36qu")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
+[connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]
 [connection signal="pressed" from="Control/Panel/NextLevel" to="." method="_on_next_level_pressed"]
