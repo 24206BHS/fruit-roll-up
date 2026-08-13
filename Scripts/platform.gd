@@ -4,6 +4,7 @@ var dragging = false
 var rotating = false
 var mouse = Vector2.ZERO #Previous mouse position for platform moving
 var offset = Vector2.ZERO #Offset of mouse from platform when moving
+var mouseIn = false
 
 signal movement #Signal to tell fruit to delete when the player moves a platform
 
@@ -17,7 +18,7 @@ func _input(event: InputEvent) -> void:
 	if rotating:
 		#if event is InputEventMouseMotion:
 			#rotating = false
-		if event is InputEventMouseButton:
+		if event is InputEventMouseButton and mouseIn:
 			if event.button_index == 4:
 				rotate(-PI/24)
 			elif event.button_index == 5:
@@ -36,3 +37,9 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			movement.emit()
 		else:
 			dragging = false
+
+func _on_area_2d_mouse_entered() -> void:
+	mouseIn = true
+
+func _on_area_2d_mouse_exited() -> void:
+	mouseIn = false

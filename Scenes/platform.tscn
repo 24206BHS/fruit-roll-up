@@ -7,7 +7,7 @@
 size = Vector2(191, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5262"]
-size = Vector2(210, 44)
+size = Vector2(210, 88)
 
 [node name="Platform" type="StaticBody2D" unique_id=304033099 groups=["Movable"]]
 scale = Vector2(2, 2)
@@ -22,8 +22,12 @@ texture_filter = 1
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_n5262")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=2140855490]
+[node name="Area2D" type="Area2D" parent="." unique_id=970614839]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=2140855490]
 z_index = 2
 shape = SubResource("RectangleShape2D_n5262")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

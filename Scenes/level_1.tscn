@@ -25,7 +25,7 @@ font_size = 32
 script = ExtResource("1_7p6j4")
 
 [node name="Platform" parent="." unique_id=304033099 instance=ExtResource("2_7p6j4")]
-position = Vector2(450, 400)
+position = Vector2(500, 400)
 scale = Vector2(2, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
@@ -44,11 +44,11 @@ offset_bottom = 234.0
 text = "Left mouse button - drag platform
 Scroll wheel - rotate platform
 Position the platform in place to get the fruit from the dropper into the basket
-Space - drop"
+Space/Enter - drop"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Control" type="Control" parent="." unique_id=1761772551]
+[node name="Win" type="Control" parent="." unique_id=1761772551]
 visible = false
 top_level = true
 layout_mode = 3
@@ -58,7 +58,7 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="Control" unique_id=1296470660]
+[node name="Panel" type="Panel" parent="Win" unique_id=1296470660]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,7 +73,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7p6j4")
 
-[node name="NextLevel" type="Button" parent="Control/Panel" unique_id=895656101]
+[node name="NextLevel" type="Button" parent="Win/Panel" unique_id=895656101]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -88,7 +88,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Next Level"
 
-[node name="Label" type="Label" parent="Control/Panel" unique_id=1838276571]
+[node name="Label" type="Label" parent="Win/Panel" unique_id=1838276571]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,5 +100,22 @@ label_settings = SubResource("LabelSettings_7p6j4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Control" type="CanvasLayer" parent="." unique_id=828695208]
+
+[node name="Button" type="Button" parent="Control" unique_id=891103010]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+offset_left = -90.0
+offset_top = -53.0
+offset_right = 90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "DROP"
+
 [connection signal="movement" from="Platform" to="." method="_on_platform_movement"]
-[connection signal="pressed" from="Control/Panel/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Win/Panel/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_drop"]

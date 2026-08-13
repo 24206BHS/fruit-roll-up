@@ -55,7 +55,7 @@ modulate = Color(0, 0, 0, 1)
 scale = Vector2(3.2, 0.2)
 texture = ExtResource("3_26dk1")
 
-[node name="Control" type="Control" parent="." unique_id=1350695701]
+[node name="Win" type="Control" parent="." unique_id=1350695701]
 visible = false
 top_level = true
 layout_mode = 3
@@ -65,7 +65,7 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="Control" unique_id=968675190]
+[node name="Panel" type="Panel" parent="Win" unique_id=968675190]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1q6tm")
 
-[node name="NextLevel" type="Button" parent="Control/Panel" unique_id=511378277]
+[node name="NextLevel" type="Button" parent="Win/Panel" unique_id=511378277]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -95,7 +95,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Next Level"
 
-[node name="Label" type="Label" parent="Control/Panel" unique_id=228314697]
+[node name="Label" type="Label" parent="Win/Panel" unique_id=228314697]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,6 +106,22 @@ text = "You win!"
 label_settings = SubResource("LabelSettings_v36qu")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Control" type="CanvasLayer" parent="." unique_id=1018331651]
+
+[node name="Button" type="Button" parent="Control" unique_id=1552021645]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+offset_left = -90.0
+offset_top = -53.0
+offset_right = 90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "DROP"
 
 [connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
 [connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]

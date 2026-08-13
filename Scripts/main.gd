@@ -10,14 +10,16 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		#print_tree_pretty()
-		if isDropped:
-			for i in get_tree().get_nodes_in_group("Fruit"):
-				i.queue_free()
-		var child = fruit.instantiate()
-		child.position = dropPos
-		self.add_child(child)
-		isDropped = true
+		_on_drop()
+
+func _on_drop() -> void:
+	if isDropped:
+		for i in get_tree().get_nodes_in_group("Fruit"):
+			i.queue_free()
+	var child = fruit.instantiate()
+	child.position = dropPos
+	self.add_child(child)
+	isDropped = true
 
 func _on_platform_movement() -> void:
 	if isDropped:
