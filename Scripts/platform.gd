@@ -15,9 +15,9 @@ func _input(event: InputEvent) -> void:
 		else:
 			dragging = false
 	if rotating:
-		if event is InputEventMouseMotion:
-			rotating = false
-		elif event is InputEventMouseButton:
+		#if event is InputEventMouseMotion:
+			#rotating = false
+		if event is InputEventMouseButton:
 			if event.button_index == 4:
 				rotate(-PI/24)
 			elif event.button_index == 5:

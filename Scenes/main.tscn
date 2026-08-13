@@ -172,5 +172,6 @@ vertical_alignment = 1
 [connection signal="pressed" from="LevelSelect/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="LevelSelect/Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="LevelSelect/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="LevelSelect/Exit" to="." method="_ready"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="LevelSelectButton" to="." method="_on_level_select_button_pressed"]

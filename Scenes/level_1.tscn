@@ -43,7 +43,8 @@ offset_right = 982.0
 offset_bottom = 234.0
 text = "Left mouse button - drag platform
 Scroll wheel - rotate platform
-Position the platform in place to get the fruit from the dropper into the basket"
+Position the platform in place to get the fruit from the dropper into the basket
+Space - drop"
 horizontal_alignment = 1
 autowrap_mode = 3
 
