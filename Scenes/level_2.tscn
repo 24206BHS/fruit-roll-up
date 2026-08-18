@@ -94,7 +94,7 @@ vertical_alignment = 1
 
 [node name="Control" type="CanvasLayer" parent="." unique_id=1236991023]
 
-[node name="Button" type="Button" parent="Control" unique_id=263225305]
+[node name="Drop" type="Button" parent="Control" unique_id=263225305]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.9
@@ -111,3 +111,4 @@ text = "DROP"
 [connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
 [connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]
 [connection signal="pressed" from="Win/Panel/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Control/Drop" to="." method="_on_drop"]
