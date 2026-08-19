@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cm6dpgumy2mwa" path="res://Scenes/platform.tscn" id="2_1q6tm"]
 [ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="3_cggpd"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://dh8abo6dllwx" path="res://Scenes/apple.tscn" id="5_cggpd"]
+[ext_resource type="Texture2D" uid="uid://yuvhgymanfd4" path="res://Resources/Dropper.png" id="6_055b2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q6tm"]
 bg_color = Color(0, 0, 0, 0.7411765)
@@ -33,6 +35,7 @@ position = Vector2(650, 400)
 scale = Vector2(1, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
+visible = false
 position = Vector2(350, 60)
 scale = Vector2(0.75, 1)
 texture = ExtResource("3_cggpd")
@@ -107,6 +110,15 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "DROP"
+
+[node name="Apple" parent="." unique_id=1663714031 instance=ExtResource("5_cggpd")]
+position = Vector2(347, 68)
+
+[node name="Dropper2" type="Sprite2D" parent="." unique_id=338595400]
+texture_filter = 1
+position = Vector2(350, 60)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_055b2")
 
 [connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
 [connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]
