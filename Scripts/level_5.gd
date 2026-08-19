@@ -1,0 +1,4 @@
+extends "res://Scripts/main.gd"
+
+func _on_next_level_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/level_6.tscn")

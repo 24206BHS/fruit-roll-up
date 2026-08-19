@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bycjl2lxscyea" path="res://Scripts/level_4.gd" id="1_wi344"]
 [ext_resource type="PackedScene" uid="uid://cm6dpgumy2mwa" path="res://Scenes/platform.tscn" id="2_wi344"]
 [ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="3_dvrgg"]
+[ext_resource type="Texture2D" uid="uid://yuvhgymanfd4" path="res://Resources/Dropper.png" id="3_f6i20"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_wk15n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8nj6"]
@@ -32,9 +33,10 @@ position = Vector2(700, 400)
 scale = Vector2(1, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
+texture_filter = 1
 position = Vector2(350, 60)
-scale = Vector2(0.75, 1)
-texture = ExtResource("3_dvrgg")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_f6i20")
 
 [node name="Goal" parent="." unique_id=48586906 instance=ExtResource("4_wk15n")]
 position = Vector2(350, 550)

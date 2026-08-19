@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfye7mdveu0jb"
-path="res://.godot/imported/Wooden board.png-148aa7832d0e041a49f860bf895f96d7.ctex"
+uid="uid://diwlnifyfsooh"
+path="res://.godot/imported/Wooden board 1.png-ac7e8794934ed9ec99f7e4443b4edbed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Wooden board.png"
-dest_files=["res://.godot/imported/Wooden board.png-148aa7832d0e041a49f860bf895f96d7.ctex"]
+source_file="res://Resources/Wooden board 1.png"
+dest_files=["res://.godot/imported/Wooden board 1.png-ac7e8794934ed9ec99f7e4443b4edbed.ctex"]
 
 [params]
 

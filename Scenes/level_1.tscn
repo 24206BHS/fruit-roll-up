@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhwuwetjl5kwo" path="res://Scripts/level_1.gd" id="1_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://cm6dpgumy2mwa" path="res://Scenes/platform.tscn" id="2_7p6j4"]
-[ext_resource type="Texture2D" uid="uid://cive771n1kovo" path="res://Resources/icon.svg" id="2_xfk5q"]
+[ext_resource type="Texture2D" uid="uid://yuvhgymanfd4" path="res://Resources/Dropper.png" id="3_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_7p6j4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p6j4"]
@@ -29,22 +29,25 @@ position = Vector2(500, 400)
 scale = Vector2(2, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
+texture_filter = 1
 position = Vector2(350, 60)
-scale = Vector2(0.75, 1)
-texture = ExtResource("2_xfk5q")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_7p6j4")
 
 [node name="Goal" parent="." unique_id=48586906 instance=ExtResource("4_7p6j4")]
 position = Vector2(850, 550)
 
 [node name="Label" type="Label" parent="." unique_id=196600657]
-offset_left = 527.0
-offset_top = 159.0
-offset_right = 982.0
-offset_bottom = 234.0
+z_index = -1
+offset_left = 528.0
+offset_top = 134.0
+offset_right = 983.0
+offset_bottom = 313.0
 text = "Left mouse button - drag platform
 Scroll wheel - rotate platform
 Position the platform in place to get the fruit from the dropper into the basket
-Space/Enter - drop"
+Space/Enter - drop
+If your fruit doesn't make it don't worry! You can keep dropping as much as you'd like"
 horizontal_alignment = 1
 autowrap_mode = 3
 
