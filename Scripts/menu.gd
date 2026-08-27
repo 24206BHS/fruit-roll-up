@@ -20,3 +20,12 @@ func _on_level_4_pressed() -> void:
 
 func _on_level_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/level_5.tscn")
+
+func _on_level_6_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/level_6.tscn")
+
+func _on_level_7_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/level_7.tscn")
+
+func _on_level_8_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/level_8.tscn")

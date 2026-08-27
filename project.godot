@@ -13,6 +13,7 @@ config_version=5
 config/name="Fruit roll up"
 run/main_scene="uid://b1xg6tmwdvsr7"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://gdi3x17cacf5"
 config/icon="res://Resources/icon.svg"
 
 [display]
@@ -32,3 +33,4 @@ common/physics_ticks_per_second=30
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.19793725, 0.19793725, 0.19793719, 1)

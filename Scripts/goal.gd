@@ -8,4 +8,5 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Fruit"):
 		modulate = Color(0,256,0)
-		get_parent().get_node("Win").visible = true
+		get_parent().get_node("Control").get_node("Win").visible = true
+		get_parent().playing = false

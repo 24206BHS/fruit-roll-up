@@ -5,37 +5,16 @@
 [ext_resource type="PhysicsMaterial" uid="uid://bo6a78of7cysr" path="res://Resources/Bouncepad.tres" id="3_hewxp"]
 [ext_resource type="Texture2D" uid="uid://yuvhgymanfd4" path="res://Resources/Dropper.png" id="3_ppxtb"]
 [ext_resource type="PackedScene" uid="uid://baflshi0wdo87" path="res://Scenes/goal.tscn" id="4_7e1oo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8nj6"]
-size = Vector2(400, 32)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q6tm"]
-bg_color = Color(0, 0, 0, 0.7411765)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-border_color = Color(0, 0, 0, 0)
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_v36qu"]
-font_size = 32
+[ext_resource type="Texture2D" uid="uid://bpcpdeoqpbx4q" path="res://Resources/retro-style-pixel-art-brick-wall-texture-dark-blue-brown-colors-game-background-383206498.png" id="7_7e1oo"]
+[ext_resource type="PackedScene" uid="uid://bmxywgdyiw0up" path="res://Scenes/UI.tscn" id="7_vpjpy"]
 
 [node name="Main" type="Node2D" unique_id=819945439]
 script = ExtResource("1_3fthp")
 
-[node name="Platform3" parent="." unique_id=304033099 instance=ExtResource("2_hewxp")]
-position = Vector2(400, 350)
-scale = Vector2(1, 1)
-
 [node name="Platform4" parent="." unique_id=89740102 instance=ExtResource("2_hewxp")]
 modulate = Color(0, 2.1168277, 0, 1)
-position = Vector2(750, 350)
-scale = Vector2(1, 1)
+position = Vector2(675, 345)
+scale = Vector2(0.5, 1)
 physics_material_override = ExtResource("3_hewxp")
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
@@ -47,106 +26,23 @@ texture = ExtResource("3_ppxtb")
 [node name="Goal" parent="." unique_id=48586906 instance=ExtResource("4_7e1oo")]
 position = Vector2(802, 550)
 
-[node name="BouncePad" type="StaticBody2D" parent="." unique_id=341805196]
-position = Vector2(576, 450)
-scale = Vector2(0.5, 1)
-physics_material_override = ExtResource("3_hewxp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BouncePad" unique_id=58211152]
-shape = SubResource("RectangleShape2D_s8nj6")
-
-[node name="ColorRect" type="ColorRect" parent="BouncePad" unique_id=1732034617]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -16.0
-offset_right = 200.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.17796496, 0.47332382, 0.18934488, 1)
-
 [node name="Label" type="Label" parent="." unique_id=754867457]
 z_index = -1
-offset_left = 360.0
-offset_top = 401.0
-offset_right = 815.0
-offset_bottom = 528.0
-text = "This is a bounce pad, it'll send your fruit flying!"
+offset_left = 450.0
+offset_top = 250.0
+offset_right = 905.0
+offset_bottom = 377.0
+text = "You can move this one!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Win" type="Control" parent="." unique_id=1350695701]
-visible = false
-top_level = true
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="RetroStylePixelArtBrickWallTextureDarkBlueBrownColorsGameBackground383206498" type="Sprite2D" parent="." unique_id=2097934211]
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = -2
+position = Vector2(576, 324)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_7e1oo")
 
-[node name="Panel" type="Panel" parent="Win" unique_id=968675190]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -150.0
-offset_right = 250.0
-offset_bottom = 150.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_1q6tm")
+[node name="Control" parent="." unique_id=1145338584 instance=ExtResource("7_vpjpy")]
 
-[node name="NextLevel" type="Button" parent="Win/Panel" unique_id=511378277]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -45.0
-offset_top = -31.0
-offset_right = 45.0
-offset_bottom = -45.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Next Level"
-
-[node name="Label" type="Label" parent="Win/Panel" unique_id=228314697]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "You win!"
-label_settings = SubResource("LabelSettings_v36qu")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Control" type="CanvasLayer" parent="." unique_id=1018331651]
-
-[node name="Drop" type="Button" parent="Control" unique_id=1552021645]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.9
-anchor_right = 0.5
-anchor_bottom = 0.9
-offset_left = -90.0
-offset_top = -53.0
-offset_right = 90.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 32
-text = "DROP"
-
-[connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
 [connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]
-[connection signal="pressed" from="Control/Drop" to="." method="_on_drop"]
