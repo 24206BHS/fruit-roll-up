@@ -13,6 +13,8 @@ func _ready() -> void:
 	dropPos.y += 20
 	$Control/Win/Panel/NextLevel.pressed.connect(_on_next_level_pressed)
 	$Control/Win/Panel/Retry.pressed.connect(_on_retry_pressed)
+	$Control/Retry.pressed.connect(_on_retry_pressed)
+	$Control/Pause.pressed.connect(_on_pause_pressed)
 	$Control/Drop.pressed.connect(_on_drop)
 	next = "res://Scenes/level_"+str(int(get_tree().current_scene.scene_file_path[19])+1)+".tscn"
 	if !FileAccess.file_exists(next):
@@ -44,3 +46,6 @@ func _on_retry_pressed() -> void:
 
 func _on_next_level_pressed() -> void:
 	get_tree().change_scene_to_file(next)
+
+func _on_pause_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")

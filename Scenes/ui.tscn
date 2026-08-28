@@ -99,7 +99,7 @@ Time taken:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pause2" type="Button" parent="." unique_id=920300277]
+[node name="Retry" type="Button" parent="." unique_id=920300277]
 anchors_preset = -1
 anchor_left = 0.925
 anchor_right = 0.925
@@ -110,7 +110,7 @@ offset_bottom = 90.0
 grow_horizontal = 0
 expand_icon = true
 
-[node name="Reset" type="Sprite2D" parent="Pause2" unique_id=1619302605]
+[node name="Reset" type="Sprite2D" parent="Retry" unique_id=1619302605]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(25, 25)
 scale = Vector2(-0.08, 0.08)
@@ -127,8 +127,8 @@ offset_bottom = 90.0
 grow_horizontal = 0
 expand_icon = true
 
-[node name="Reset" type="Sprite2D" parent="Pause" unique_id=2118464030]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(25, 25)
-scale = Vector2(-0.08, 0.08)
-texture = ExtResource("1_jxero")
+[node name="Line2D" type="Line2D" parent="Pause" unique_id=778648161]
+points = PackedVector2Array(15, 5, 15, 45)
+
+[node name="Line2D2" type="Line2D" parent="Pause" unique_id=1729331689]
+points = PackedVector2Array(35, 5, 35, 45)
