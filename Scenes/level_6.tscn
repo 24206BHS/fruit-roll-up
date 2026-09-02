@@ -73,5 +73,6 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_rkygx")
 
 [node name="Control" parent="." unique_id=1145338584 instance=ExtResource("6_gqpvc")]
+visible = false
 
 [connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]

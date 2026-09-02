@@ -8,6 +8,7 @@ var playing = true
 var next = ""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Control.visible = true
 	$Control/Win.visible = false
 	dropPos = $Dropper.position
 	dropPos.y += 20

@@ -8,14 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://bmxywgdyiw0up" path="res://Scenes/ui.tscn" id="6_q1vug"]
 [ext_resource type="Texture2D" uid="uid://bpcpdeoqpbx4q" path="res://Resources/retro-style-pixel-art-brick-wall-texture-dark-blue-brown-colors-game-background-383206498.png" id="7_vaeam"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaeam"]
+size = Vector2(400, 32)
+
 [node name="Main" type="Node2D" unique_id=819945439]
 script = ExtResource("1_cy2qo")
 
 [node name="Platform4" parent="." unique_id=89740102 instance=ExtResource("2_vaeam")]
 modulate = Color(0, 2.1168277, 0, 1)
-position = Vector2(400, 345)
+position = Vector2(700, 350)
 scale = Vector2(0.5, 1)
 physics_material_override = ExtResource("3_a0bmv")
+
+[node name="Platform3" parent="." unique_id=304033099 instance=ExtResource("2_vaeam")]
+position = Vector2(450, 500)
+scale = Vector2(1, 1)
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1983912730]
 texture_filter = 1
@@ -24,9 +31,10 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_ry3a7")
 
 [node name="Goal" parent="." unique_id=48586906 instance=ExtResource("5_0snvp")]
-position = Vector2(802, 550)
+position = Vector2(350, 600)
 
 [node name="Control" parent="." unique_id=1145338584 instance=ExtResource("6_q1vug")]
+visible = false
 
 [node name="RetroStylePixelArtBrickWallTextureDarkBlueBrownColorsGameBackground383206498" type="Sprite2D" parent="." unique_id=693369726]
 modulate = Color(1, 1, 1, 0.39215687)
@@ -35,4 +43,28 @@ position = Vector2(576, 324)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_vaeam")
 
+[node name="BouncePad" type="StaticBody2D" parent="." unique_id=1405857673]
+position = Vector2(350, 300)
+rotation = 0.5235988
+scale = Vector2(0.5, 1)
+physics_material_override = ExtResource("3_a0bmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BouncePad" unique_id=1299095848]
+shape = SubResource("RectangleShape2D_vaeam")
+
+[node name="ColorRect" type="ColorRect" parent="BouncePad" unique_id=865802691]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -16.0
+offset_right = 200.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.61960787, 0.11764706, 1)
+
 [connection signal="movement" from="Platform4" to="." method="_on_platform_movement"]
+[connection signal="movement" from="Platform3" to="." method="_on_platform_movement"]
