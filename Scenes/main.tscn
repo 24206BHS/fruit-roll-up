@@ -29,6 +29,7 @@ grow_vertical = 2
 script = ExtResource("1_jjgbg")
 
 [node name="LevelSelect" type="Panel" parent="." unique_id=1932268977]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
@@ -178,9 +179,9 @@ text = "Play (Level 1)"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.45
-anchor_top = 0.6
+anchor_top = 0.65
 anchor_right = 0.55
-anchor_bottom = 0.6
+anchor_bottom = 0.65
 offset_left = -52.0
 offset_top = -15.5
 offset_right = 52.0

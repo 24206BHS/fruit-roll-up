@@ -2,12 +2,16 @@ extends Control
 
 func _ready() -> void:
 	$LevelSelect.visible = false
+	$Play.disabled = false
+	$LevelSelectButton.disabled = false
 
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
 
 func _on_level_select_button_pressed() -> void:
 	$LevelSelect.visible = true
+	$Play.disabled = true
+	$LevelSelectButton.disabled = true
 
 func _on_level_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
