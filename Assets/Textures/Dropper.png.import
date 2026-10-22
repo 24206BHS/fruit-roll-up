@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfye7mdveu0jb"
-path="res://.godot/imported/Wooden board.png-148aa7832d0e041a49f860bf895f96d7.ctex"
+uid="uid://yuvhgymanfd4"
+path="res://.godot/imported/Dropper.png-c2fee531aa898fc3d7efbf66358b23fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Wooden board.png"
-dest_files=["res://.godot/imported/Wooden board.png-148aa7832d0e041a49f860bf895f96d7.ctex"]
+source_file="res://Assets/Textures/Dropper.png"
+dest_files=["res://.godot/imported/Dropper.png-c2fee531aa898fc3d7efbf66358b23fb.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cm6dpgumy2mwa"]
 
 [ext_resource type="Script" uid="uid://cqaft6ti0hnxp" path="res://Scripts/platform.gd" id="1_n5262"]
-[ext_resource type="Texture2D" uid="uid://bmtkvof7lfx6b" path="res://Resources/Wooden board.png" id="2_n5262"]
+[ext_resource type="Texture2D" uid="uid://bfye7mdveu0jb" path="res://Assets/Textures/Wooden board.png" id="2_n5262"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(191, 24)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmxywgdyiw0up"]
 
-[ext_resource type="Texture2D" uid="uid://bbu60b5ewvfuq" path="res://Resources/reset.png" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://bbu60b5ewvfuq" path="res://Assets/Textures/reset.png" id="1_jxero"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q6tm"]
 bg_color = Color(0, 0, 0, 0.7411765)
@@ -117,7 +117,7 @@ scale = Vector2(-0.08, 0.08)
 texture = ExtResource("1_jxero")
 
 [node name="Pause" type="Button" parent="." unique_id=590336415]
-anchors_preset = -1
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -110.0

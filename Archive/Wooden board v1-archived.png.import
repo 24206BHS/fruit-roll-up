@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diwlnifyfsooh"
-path="res://.godot/imported/Wooden board 1.png-ac7e8794934ed9ec99f7e4443b4edbed.ctex"
+path="res://.godot/imported/Wooden board v1-archived.png-fca4994b8f8ca4120fa80bb7fd64d69c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Wooden board 1.png"
-dest_files=["res://.godot/imported/Wooden board 1.png-ac7e8794934ed9ec99f7e4443b4edbed.ctex"]
+source_file="res://Archive/Wooden board v1-archived.png"
+dest_files=["res://.godot/imported/Wooden board v1-archived.png-fca4994b8f8ca4120fa80bb7fd64d69c.ctex"]
 
 [params]
 

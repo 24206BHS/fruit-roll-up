@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://42i6e4igybed"
-path="res://.godot/imported/Apple.png-919d5e034aa383dcaf9a7c187c4f034e.ctex"
+uid="uid://bpcpdeoqpbx4q"
+path="res://.godot/imported/retro-style-pixel-art-brick-wall-texture-dark-blue-brown-colors-game-background-383206498.png-1cfb66162e6fe1dc581abedd57fc53cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Apple.png"
-dest_files=["res://.godot/imported/Apple.png-919d5e034aa383dcaf9a7c187c4f034e.ctex"]
+source_file="res://Assets/Textures/retro-style-pixel-art-brick-wall-texture-dark-blue-brown-colors-game-background-383206498.png"
+dest_files=["res://.godot/imported/retro-style-pixel-art-brick-wall-texture-dark-blue-brown-colors-game-background-383206498.png-1cfb66162e6fe1dc581abedd57fc53cc.ctex"]
 
 [params]
 
